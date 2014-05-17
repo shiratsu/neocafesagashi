@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-NeoCafesagashiTests-Kiwi.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NeoCafesagashiTests-OCMock.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NeoCafesagashiTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SMCalloutView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>27E1AA15CCC64687B1594950</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BFDE08103904B939C37ED32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65C014BC461447C8AE9E45C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>794ABE65E069499F82FE975B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9932355C6BDF4CACA7232BFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
