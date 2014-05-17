@@ -7,11 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "GoogleMapAPIKey.h"
+#import <GoogleMaps/GoogleMaps.h>
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    id services_;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    if ([kAPIKey length] == 0) {
+        // Blow up if APIKey has not yet been set.
+        NSString *bundleId = [[NSBundle mainBundle] bundleIdentifier];
+        NSString *format = @"Configure APIKey inside GoogleMapAPIKey.h for your "
+        @"bundle `%@`, see README.GoogleMapsSDKDemos for more information";
+        @throw [NSException exceptionWithName:@"AppDelegate"
+                                       reason:[NSString stringWithFormat:format, bundleId]
+                                     userInfo:nil];
+    }
+    [GMSServices provideAPIKey:kAPIKey];
+    services_ = [GMSServices sharedServices];
+    
+    // Log the required open source licenses!  Yes, just NSLog-ing them is not
+    // enough but is good for a demo.
+    NSLog(@"Open source licenses:\n%@", [GMSServices openSourceLicenseInfo]);
+    
     // Override point for customization after application launch.
     return YES;
 }
