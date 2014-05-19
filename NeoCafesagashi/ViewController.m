@@ -12,6 +12,9 @@
 #import "Utility.h"
 #import "CafeService.h"
 #import <SMCalloutView/SMCalloutView.h>
+#import "MBProgressHUD.h"
+
+static const CGFloat CalloutYOffset = 10.0f;
 
 @interface ViewController ()<GMSMapViewDelegate>
 
@@ -22,6 +25,7 @@
 @property(weak,nonatomic) NSMutableArray *cafeAry;
 @property(strong,nonatomic) NSMutableArray *backupAry;
 @property (strong, nonatomic) SMCalloutView *calloutView;
+@property (strong, nonatomic) UIView *emptyCalloutView;
 @property(assign) float defaultRadius;
 - (void)startLocation;
 - (void)stopLocation;
@@ -42,6 +46,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //ピンに表示する情報Window
+    self.calloutView = [[SMCalloutView alloc] init];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [button addTarget:self
+               action:@selector(calloutAccessoryButtonTapped:)
+     forControlEvents:UIControlEventTouchUpInside];
+    self.calloutView.rightAccessoryView = button;
+    
+    self.emptyCalloutView = [[UIView alloc] initWithFrame:CGRectZero];
     
     _mapView = [[GMSMapView alloc] initWithFrame:self.view.bounds];
     _mapView.myLocationEnabled = YES;
@@ -281,6 +295,40 @@
     
 }
 
+- (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker {
+    CLLocationCoordinate2D anchor = marker.position;
+    
+    CGPoint point = [mapView.projection pointForCoordinate:anchor];
+    
+    self.calloutView.title = marker.title;
+    
+    self.calloutView.calloutOffset = CGPointMake(0, -CalloutYOffset);
+    
+    self.calloutView.hidden = NO;
+    
+    CGRect calloutRect = CGRectZero;
+    calloutRect.origin = point;
+    calloutRect.size = CGSizeZero;
+    
+    [self.calloutView presentCalloutFromRect:calloutRect
+                                      inView:mapView
+                           constrainedToView:mapView
+                                    animated:YES];
+    
+    return self.emptyCalloutView;
+}
+
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
+    self.calloutView.hidden = YES;
+}
+
+- (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker {
+    /* don't move map camera to center marker on tap */
+    mapView.selectedMarker = marker;
+    return YES;
+}
+
+
 /**
  *  マーカーのウィンドウをタップした際に通知される。(結論使わない)
  *  ここに画面遷移を追記する
@@ -308,6 +356,7 @@
  *  @param position_ 位置
  */
 -(void)mapView:(GMSMapView*)map_view_ didChangeCameraPosition:(GMSCameraPosition *)position_{
+    self.calloutView.hidden = YES;
     NSLog(@"map move");
     //縮尺を取得
     double zoom = position_.zoom;
@@ -323,6 +372,8 @@
     [self searchCafe:lat withLon:lng withDistance:_defaultRadius];
     
 }
+
+
 
 
 /**
