@@ -13,13 +13,17 @@
 #import "CafeService.h"
 #import <SMCalloutView/SMCalloutView.h>
 #import "MBProgressHUD.h"
+#import "Web.h"
 
 static const CGFloat CalloutYOffset = 10.0f;
 
 @interface ViewController ()<GMSMapViewDelegate>
+{
+    
+}
 
-@property(strong,nonatomic) GMSMapView *mapView;
-@property(strong,nonatomic) GADBannerView *bannerView;
+@property(strong,nonatomic) IBOutlet GMSMapView *mapView;
+@property(strong,nonatomic) IBOutlet GADBannerView *bannerView;
 @property(strong,nonatomic) CLLocationManager *lm;
 @property(strong,nonatomic) CafeService *cafe;
 @property(weak,nonatomic) NSMutableArray *cafeAry;
@@ -47,6 +51,9 @@ static const CGFloat CalloutYOffset = 10.0f;
 {
     [super viewDidLoad];
     
+    
+    
+    
     //ピンに表示する情報Window
     self.calloutView = [[SMCalloutView alloc] init];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -57,10 +64,24 @@ static const CGFloat CalloutYOffset = 10.0f;
     
     self.emptyCalloutView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    _mapView = [[GMSMapView alloc] initWithFrame:self.view.bounds];
+    //_mapView = [[GMSMapView alloc] initWithFrame:self.view.bounds];
     _mapView.myLocationEnabled = YES;
     _mapView.delegate = self;
-    self.view = _mapView;
+    
+    /*
+    _bannerView = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0,
+                                                                   60.0,
+                                                                   GAD_SIZE_320x50.width,
+                                                                   GAD_SIZE_320x50.height)];
+    */
+    // 広告ユニット ID を指定する
+    _bannerView.adUnitID = @"ca-app-pub-8789201169323567/1907251504";
+    _bannerView.rootViewController = self;
+    [self.view addSubview:_bannerView];
+    
+    GADRequest *request = [GADRequest request];
+    [_bannerView loadRequest:request];
+    
     
     _lm = [[CLLocationManager alloc] init];
     _lm.delegate = self;

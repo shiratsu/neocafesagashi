@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NeoCafesagashi/ViewController.m"
-            timestampString = "422211525.016913"
+            timestampString = "422672545.901317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
             landmarkName = "-setPin"
             landmarkType = "5">
          </BreakpointContent>
