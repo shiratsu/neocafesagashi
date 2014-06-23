@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface Web : UIViewController
-
-@property(nonatomic,assign) NSString *url;
+<UIWebViewDelegate>
+{
+    __strong NSString *serviceUrl;
+    __strong NSString *sequenceNo;
+    __strong IBOutlet UIWebView *webView;
+}
+@property(strong,readwrite) NSString *serviceUrl;
+@property(strong,readwrite) NSString *sequenceNo;
+@property(strong,readwrite) IBOutlet UIWebView *webView;
 
 @end

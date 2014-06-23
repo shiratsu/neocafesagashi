@@ -12,7 +12,7 @@
 #import "TableDefine.h"
 #import "Common.h"
 
-#define DBFILE @"cafesagashi.db"
+#define DBFILE @"NeoCafeSagashiForSwift.sqlite"
 
 @implementation SqliteBaseService
 

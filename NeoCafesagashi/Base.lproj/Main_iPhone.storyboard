@@ -20,7 +20,72 @@
             </objects>
             <point key="canvasLocation" x="336" y="225"/>
         </scene>
-        <!--View Controller-->
+        <!--Web-->
+        <scene sceneID="cWF-ED-urN">
+            <objects>
+                <viewController storyboardIdentifier="web_storyboard" id="P4y-I9-ugH" customClass="Web" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zfd-ZM-HXD"/>
+                        <viewControllerLayoutGuide type="bottom" id="HJ9-IL-N3b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GxL-wr-Yb1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nh0-Rw-Ts4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="478"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P4y-I9-ugH" id="Yli-Sh-zap"/>
+                                </connections>
+                            </webView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YxT-8b-Zc9" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="478" width="320" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkq-vS-mMC">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YSL-hC-NwX"/>
+                                    <barButtonItem title="＜" style="plain" id="zsF-wL-nY2">
+                                        <connections>
+                                            <action selector="back:" destination="P4y-I9-ugH" id="884-II-lj4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Rys-oZ-v4W"/>
+                                    <barButtonItem title="＞" id="CR8-OC-Ac2">
+                                        <connections>
+                                            <action selector="nextPage:" destination="P4y-I9-ugH" id="vbl-aa-tj8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="h8c-tJ-8fa"/>
+                                    <barButtonItem systemItem="refresh" id="XJt-YP-UQe">
+                                        <connections>
+                                            <action selector="reload:" destination="P4y-I9-ugH" id="HUN-WM-aRj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HSA-Hn-Loq"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gkq-vS-mMC" firstAttribute="top" secondItem="YxT-8b-Zc9" secondAttribute="bottom" id="38N-QH-kU7"/>
+                            <constraint firstItem="YxT-8b-Zc9" firstAttribute="top" secondItem="nh0-Rw-Ts4" secondAttribute="bottom" id="Jpo-0c-p0a"/>
+                            <constraint firstItem="nh0-Rw-Ts4" firstAttribute="top" secondItem="GxL-wr-Yb1" secondAttribute="top" id="La1-g7-dg2"/>
+                            <constraint firstItem="HJ9-IL-N3b" firstAttribute="top" secondItem="gkq-vS-mMC" secondAttribute="bottom" id="TWP-FF-eUC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="YxT-8b-Zc9" id="rVA-rs-vO6"/>
+                        <outlet property="webView" destination="nh0-Rw-Ts4" id="TOq-3s-fCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4VI-As-cMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="689" y="916"/>
+        </scene>
+        <!--View Controller - カフェ探し-->
         <scene sceneID="BVi-eH-vHh">
             <objects>
                 <viewController id="v7Y-Ei-m4l" customClass="ViewController" sceneMemberID="viewController">
@@ -33,13 +98,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SrO-HZ-4Zp" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="461"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oD-wL-phF" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -53,7 +116,13 @@
                             <constraint firstItem="0oD-wL-phF" firstAttribute="top" secondItem="560-Ia-VWs" secondAttribute="bottom" constant="454" id="vdA-MY-P3r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="891-jP-SjI"/>
+                    <navigationItem key="navigationItem" title="カフェ探し" id="K4r-Lz-wE9">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="W5U-cC-jIA">
+                            <connections>
+                                <action selector="reloadPosition:" destination="v7Y-Ei-m4l" id="Wvj-1J-4Wf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bannerView" destination="0oD-wL-phF" id="Are-SE-rNn"/>
                         <outlet property="mapView" destination="SrO-HZ-4Zp" id="8W2-4P-zZt"/>

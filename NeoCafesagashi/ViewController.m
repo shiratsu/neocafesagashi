@@ -16,6 +16,7 @@
 #import "Web.h"
 
 static const CGFloat CalloutYOffset = 10.0f;
+static NSString * const urlKey = @"url";
 
 @interface ViewController ()<GMSMapViewDelegate>
 {
@@ -93,20 +94,6 @@ static const CGFloat CalloutYOffset = 10.0f;
     _defaultRadius = 300;
     _backupAry = [[NSMutableArray alloc] init];
     
-    //左上にメニューボタン的な何か
-    UIBarButtonItem *btn =
-    [[UIBarButtonItem alloc]
-     initWithTitle:@"MENU" style:UIBarButtonItemStylePlain target:self action:@selector(openMenu:)
-     ];
-    self.navigationItem.leftBarButtonItem = btn;
-    self.navigationItem.title = @"カフェ探し";
-    
-    //右上に現在地でデータを取得する処理
-    UIBarButtonItem *rbtn =
-    [[UIBarButtonItem alloc]
-     initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadPosition:)
-     ];
-    self.navigationItem.rightBarButtonItem = rbtn;
     
     
     
@@ -120,28 +107,23 @@ static const CGFloat CalloutYOffset = 10.0f;
 }
 
 
-/**
- *  メニューを開く
- *
- *  @param sender uibarbuttonitemが入ってる
- */
--(void)openMenu:(id)sender{
-    
-}
+
 
 /**
  *  現在地取得を再開
  *
  *  @param sender uibarbuttonitemが入ってる
  */
--(void)reloadPosition:(id)sender{
+- (IBAction)reloadPosition:(id)sender {
     [self startLocation];
 }
+
 
 /**
  *  現在地の取得を開始
  */
 - (void)startLocation {
+    NSLog(@"start now location");
     [_lm startUpdatingLocation];
 }
 
@@ -163,7 +145,8 @@ static const CGFloat CalloutYOffset = 10.0f;
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = newLocation.coordinate.latitude;
     coordinate.longitude = newLocation.coordinate.longitude;
-    //NSLog(@"get now position");
+    
+    NSLog(@"get now position");
     // この緯度経度で何かやる・・・
     GMSCameraPosition *now = [GMSCameraPosition cameraWithLatitude:coordinate.latitude longitude:coordinate.longitude zoom:17];
     [_mapView setCamera:now];
@@ -302,12 +285,18 @@ static const CGFloat CalloutYOffset = 10.0f;
         double d_lat = [[[_cafeAry objectAtIndex:i] objectForKey:@"lat"] doubleValue];
         double d_lon = [[[_cafeAry objectAtIndex:i] objectForKey:@"lng"] doubleValue];
         
-                
+        NSDictionary *markerInfo =
+                                 @{
+                                     urlKey: [[_cafeAry objectAtIndex:i] objectForKey:@"url"]
+                                     }
+                                 ;
+        
         GMSMarker *cafeMarker = [[GMSMarker alloc] init];
         
         cafeMarker.title = [[_cafeAry objectAtIndex:i] objectForKey:@"store_name"];
         cafeMarker.position = CLLocationCoordinate2DMake(d_lat,d_lon);
         cafeMarker.appearAnimation = kGMSMarkerAnimationPop;
+        cafeMarker.userData = markerInfo;
         cafeMarker.flat = YES;
         cafeMarker.draggable = YES;
         cafeMarker.groundAnchor = CGPointMake(0.5, 0.5);
@@ -368,6 +357,20 @@ static const CGFloat CalloutYOffset = 10.0f;
  */
 - (void)calloutAccessoryButtonTapped:(id)sender {
     
+    if (self.mapView.selectedMarker) {
+        
+        GMSMarker *marker = self.mapView.selectedMarker;
+        NSDictionary *userData = marker.userData;
+        
+        //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        
+        Web *w = [self.storyboard instantiateViewControllerWithIdentifier:@"web_storyboard"];
+        NSLog(@"%@",userData[urlKey]);
+        [w setServiceUrl:userData[urlKey]];
+        [self.navigationController pushViewController:w animated:YES];
+        w=nil;
+    }
+    
 }
 
 /**
@@ -395,6 +398,27 @@ static const CGFloat CalloutYOffset = 10.0f;
 }
 
 
+/**
+ *  画面が表示になる直前
+ *
+ *  @param animated アニメーションがあるかどうか
+ */
+-(void)viewWillappear:(BOOL)animated{
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *latStr = (NSString*)[defaults objectForKey:@"lat"];
+    NSString *lonStr = (NSString*)[defaults objectForKey:@"lon"];
+    NSString *distanceStr = (NSString*)[defaults objectForKey:@"distance"];
+    
+    double lat = latStr.doubleValue;
+    double lng = lonStr.doubleValue;
+    double distance = distanceStr.doubleValue;
+    
+    
+    [self searchCafe:lat withLon:lng withDistance:distance];
+    
+}
 
 
 /**
@@ -406,6 +430,11 @@ static const CGFloat CalloutYOffset = 10.0f;
     
     //マーカー削除
     [_mapView clear];
+    _backupAry = nil;
+    _backupAry = [[NSMutableArray alloc] init];
+    _cafeAry = nil;
+    _cafeAry = [[NSMutableArray alloc] init];
+    
     
 }
 

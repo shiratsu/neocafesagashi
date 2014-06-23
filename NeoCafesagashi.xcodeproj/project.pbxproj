@@ -33,14 +33,8 @@
 		580EE35419064E9700F39E4E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 580EE35219064E8E00F39E4E /* GoogleMaps.bundle */; };
 		58274A6E18FF4A5E00B54D91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58274A6D18FF4A5E00B54D91 /* MapKit.framework */; };
 		58418A631931703E0060D65A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58418A141931703E0060D65A /* libGoogleAdMobAds.a */; };
-		5863E5231919238B004CFA07 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863E5211919238B004CFA07 /* License.m */; };
-		5863E5241919238B004CFA07 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863E5211919238B004CFA07 /* License.m */; };
-		5863E5251919238B004CFA07 /* License.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5863E5221919238B004CFA07 /* License.xib */; };
-		5863E5261919238B004CFA07 /* License.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5863E5221919238B004CFA07 /* License.xib */; };
 		5863E52A19192693004CFA07 /* Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863E52819192693004CFA07 /* Web.m */; };
 		5863E52B19192693004CFA07 /* Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863E52819192693004CFA07 /* Web.m */; };
-		5863E52C19192693004CFA07 /* Web.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5863E52919192693004CFA07 /* Web.xib */; };
-		5863E52D19192693004CFA07 /* Web.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5863E52919192693004CFA07 /* Web.xib */; };
 		5864C5EF18FDE6DC00A54149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5864C5EE18FDE6DC00A54149 /* Foundation.framework */; };
 		5864C5F118FDE6DC00A54149 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5864C5F018FDE6DC00A54149 /* CoreGraphics.framework */; };
 		5864C5F318FDE6DC00A54149 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5864C5F218FDE6DC00A54149 /* UIKit.framework */; };
@@ -48,7 +42,6 @@
 		5864C5FB18FDE6DC00A54149 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5864C5FA18FDE6DC00A54149 /* main.m */; };
 		5864C5FF18FDE6DC00A54149 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5864C5FE18FDE6DC00A54149 /* AppDelegate.m */; };
 		5864C60218FDE6DC00A54149 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5864C60018FDE6DC00A54149 /* Main_iPhone.storyboard */; };
-		5864C60518FDE6DC00A54149 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5864C60318FDE6DC00A54149 /* Main_iPad.storyboard */; };
 		5864C60818FDE6DC00A54149 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5864C60718FDE6DC00A54149 /* ViewController.m */; };
 		5864C60A18FDE6DC00A54149 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5864C60918FDE6DC00A54149 /* Images.xcassets */; };
 		5864C61118FDE6DC00A54149 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5864C61018FDE6DC00A54149 /* XCTest.framework */; };
@@ -86,8 +79,7 @@
 		58D46E13190F9D4A00D8F910 /* Cafes.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D46E11190F9D4A00D8F910 /* Cafes.m */; };
 		58D46E16190F9E4E00D8F910 /* CafeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D46E15190F9E4E00D8F910 /* CafeService.m */; };
 		58D46E17190F9E4E00D8F910 /* CafeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D46E15190F9E4E00D8F910 /* CafeService.m */; };
-		58D46E19190FA07C00D8F910 /* cafesagashi.db in Resources */ = {isa = PBXBuildFile; fileRef = 58D46E18190FA07C00D8F910 /* cafesagashi.db */; };
-		58D46E1A190FA07C00D8F910 /* cafesagashi.db in Resources */ = {isa = PBXBuildFile; fileRef = 58D46E18190FA07C00D8F910 /* cafesagashi.db */; };
+		58E8D92F1957CC6E007F3FB0 /* NeoCafeSagashiForSwift.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 58E8D92E1957CC6E007F3FB0 /* NeoCafeSagashiForSwift.sqlite */; };
 		C891D5C2391A4E8BB0D48315 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7B13C36C945978084E688 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -126,12 +118,8 @@
 		58418A121931703E0060D65A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
 		58418A131931703E0060D65A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
 		58418A141931703E0060D65A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
-		5863E5201919238B004CFA07 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
-		5863E5211919238B004CFA07 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
-		5863E5221919238B004CFA07 /* License.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = License.xib; sourceTree = "<group>"; };
 		5863E52719192693004CFA07 /* Web.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Web.h; sourceTree = "<group>"; };
 		5863E52819192693004CFA07 /* Web.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Web.m; sourceTree = "<group>"; };
-		5863E52919192693004CFA07 /* Web.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Web.xib; sourceTree = "<group>"; };
 		5864C5EB18FDE6DC00A54149 /* NeoCafesagashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeoCafesagashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5864C5EE18FDE6DC00A54149 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5864C5F018FDE6DC00A54149 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,7 +131,6 @@
 		5864C5FD18FDE6DC00A54149 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5864C5FE18FDE6DC00A54149 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5864C60118FDE6DC00A54149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		5864C60418FDE6DC00A54149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		5864C60618FDE6DC00A54149 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5864C60718FDE6DC00A54149 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5864C60918FDE6DC00A54149 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -191,7 +178,7 @@
 		58D46E11190F9D4A00D8F910 /* Cafes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cafes.m; sourceTree = "<group>"; };
 		58D46E14190F9E4E00D8F910 /* CafeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafeService.h; sourceTree = "<group>"; };
 		58D46E15190F9E4E00D8F910 /* CafeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafeService.m; sourceTree = "<group>"; };
-		58D46E18190FA07C00D8F910 /* cafesagashi.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cafesagashi.db; sourceTree = "<group>"; };
+		58E8D92E1957CC6E007F3FB0 /* NeoCafeSagashiForSwift.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeoCafeSagashiForSwift.sqlite; sourceTree = "<group>"; };
 		6F1A7AF6F9F54AC39840C272 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8DB7B13C36C945978084E688 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -374,19 +361,14 @@
 				5864C5FD18FDE6DC00A54149 /* AppDelegate.h */,
 				5864C5FE18FDE6DC00A54149 /* AppDelegate.m */,
 				5864C60018FDE6DC00A54149 /* Main_iPhone.storyboard */,
-				5864C60318FDE6DC00A54149 /* Main_iPad.storyboard */,
 				5864C60618FDE6DC00A54149 /* ViewController.h */,
 				5864C60718FDE6DC00A54149 /* ViewController.m */,
 				5864C60918FDE6DC00A54149 /* Images.xcassets */,
 				5864C5F518FDE6DC00A54149 /* Supporting Files */,
 				58A21F52190382510079B2D1 /* GoogleMapAPIKey.h */,
 				580EE32F1905874900F39E4E /* CommonTest.m */,
-				5863E5201919238B004CFA07 /* License.h */,
-				5863E5211919238B004CFA07 /* License.m */,
-				5863E5221919238B004CFA07 /* License.xib */,
 				5863E52719192693004CFA07 /* Web.h */,
 				5863E52819192693004CFA07 /* Web.m */,
-				5863E52919192693004CFA07 /* Web.xib */,
 			);
 			path = NeoCafesagashi;
 			sourceTree = "<group>";
@@ -394,7 +376,7 @@
 		5864C5F518FDE6DC00A54149 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				58D46E18190FA07C00D8F910 /* cafesagashi.db */,
+				58E8D92E1957CC6E007F3FB0 /* NeoCafeSagashiForSwift.sqlite */,
 				5864C5F618FDE6DC00A54149 /* NeoCafesagashi-Info.plist */,
 				5864C5F718FDE6DC00A54149 /* InfoPlist.strings */,
 				5864C5FA18FDE6DC00A54149 /* main.m */,
@@ -567,13 +549,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5864C60518FDE6DC00A54149 /* Main_iPad.storyboard in Resources */,
-				58D46E19190FA07C00D8F910 /* cafesagashi.db in Resources */,
 				5864C60A18FDE6DC00A54149 /* Images.xcassets in Resources */,
+				58E8D92F1957CC6E007F3FB0 /* NeoCafeSagashiForSwift.sqlite in Resources */,
 				5864C60218FDE6DC00A54149 /* Main_iPhone.storyboard in Resources */,
 				580EE35319064E8E00F39E4E /* GoogleMaps.bundle in Resources */,
-				5863E5251919238B004CFA07 /* License.xib in Resources */,
-				5863E52C19192693004CFA07 /* Web.xib in Resources */,
 				5864C5F918FDE6DC00A54149 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,10 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				580EE35419064E9700F39E4E /* GoogleMaps.bundle in Resources */,
-				5863E52D19192693004CFA07 /* Web.xib in Resources */,
-				58D46E1A190FA07C00D8F910 /* cafesagashi.db in Resources */,
 				5864C61B18FDE6DC00A54149 /* InfoPlist.strings in Resources */,
-				5863E5261919238B004CFA07 /* License.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,7 +641,6 @@
 				5864C60818FDE6DC00A54149 /* ViewController.m in Sources */,
 				5864C5FF18FDE6DC00A54149 /* AppDelegate.m in Sources */,
 				58A21E91190215320079B2D1 /* Utility.m in Sources */,
-				5863E5231919238B004CFA07 /* License.m in Sources */,
 				58A21E8719017EA10079B2D1 /* FMResultSet.m in Sources */,
 				58A21E8A19017F230079B2D1 /* TableDefine.m in Sources */,
 				58A21E8E1902009B0079B2D1 /* SqliteBaseService.m in Sources */,
@@ -687,7 +662,6 @@
 				58D46E17190F9E4E00D8F910 /* CafeService.m in Sources */,
 				58D46E13190F9D4A00D8F910 /* Cafes.m in Sources */,
 				5864C61D18FDE6DC00A54149 /* NeoCafesagashiTests.m in Sources */,
-				5863E5241919238B004CFA07 /* License.m in Sources */,
 				5863E52B19192693004CFA07 /* Web.m in Sources */,
 				58B37A0E19009E9700633172 /* NeoCafesagashiSpec.m in Sources */,
 			);
@@ -718,14 +692,6 @@
 				5864C60118FDE6DC00A54149 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		5864C60318FDE6DC00A54149 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5864C60418FDE6DC00A54149 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		5864C61918FDE6DC00A54149 /* InfoPlist.strings */ = {
@@ -826,6 +792,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NeoCafesagashi/NeoCafesagashi-Prefix.pch";
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NeoCafesagashi",
@@ -850,6 +817,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NeoCafesagashi/NeoCafesagashi-Prefix.pch";
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NeoCafesagashi",
