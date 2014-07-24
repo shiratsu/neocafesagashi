@@ -1,10 +1,13 @@
 PODS:
+  - KINWebBrowser (0.2.4)
   - SMCalloutView (2.0)
 
 DEPENDENCIES:
+  - KINWebBrowser
   - SMCalloutView (~> 2.0)
 
 SPEC CHECKSUMS:
-  SMCalloutView: 1b8d1de1232d73b4f4a195c9238e84384b070470
+  KINWebBrowser: 466c88a47d28e36ca202f312d9b8f756791b8c63
+  SMCalloutView: c1906604d47c058400ade5c9d52ab98aa77b7e76
 
 COCOAPODS: 0.32.1

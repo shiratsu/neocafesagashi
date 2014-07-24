@@ -6,6 +6,12 @@
 // project.
 
 
+// KINWebBrowser
+#define COCOAPODS_POD_AVAILABLE_KINWebBrowser
+#define COCOAPODS_VERSION_MAJOR_KINWebBrowser 0
+#define COCOAPODS_VERSION_MINOR_KINWebBrowser 2
+#define COCOAPODS_VERSION_PATCH_KINWebBrowser 4
+
 // SMCalloutView
 #define COCOAPODS_POD_AVAILABLE_SMCalloutView
 #define COCOAPODS_VERSION_MAJOR_SMCalloutView 2

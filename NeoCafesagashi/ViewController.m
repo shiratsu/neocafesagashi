@@ -14,20 +14,22 @@
 #import <SMCalloutView/SMCalloutView.h>
 #import "MBProgressHUD.h"
 #import "Web.h"
+#import <dispatch/dispatch.h>
+
 
 static const CGFloat CalloutYOffset = 10.0f;
 static NSString * const urlKey = @"url";
 
 @interface ViewController ()<GMSMapViewDelegate>
 {
-    
+    BOOL _pinclflag;
 }
 
 @property(strong,nonatomic) IBOutlet GMSMapView *mapView;
 @property(strong,nonatomic) IBOutlet GADBannerView *bannerView;
 @property(strong,nonatomic) CLLocationManager *lm;
 @property(strong,nonatomic) CafeService *cafe;
-@property(weak,nonatomic) NSMutableArray *cafeAry;
+@property(strong,nonatomic) NSMutableArray *cafeAry;
 @property(strong,nonatomic) NSMutableArray *backupAry;
 @property (strong, nonatomic) SMCalloutView *calloutView;
 @property (strong, nonatomic) UIView *emptyCalloutView;
@@ -123,6 +125,8 @@ static NSString * const urlKey = @"url";
  *  現在地の取得を開始
  */
 - (void)startLocation {
+    _backupAry = nil;
+    _backupAry = [[NSMutableArray alloc] init];
     NSLog(@"start now location");
     [_lm startUpdatingLocation];
 }
@@ -158,8 +162,13 @@ static NSString * const urlKey = @"url";
 	[defaults setObject:[NSString stringWithFormat:@"%f",_defaultRadius] forKey:@"distance"];
     defaults=nil;
     
-    //カフェを検索する
     [self searchCafe:coordinate.latitude withLon:coordinate.longitude withDistance:_defaultRadius];
+    
+    //カフェを検索する
+//    dispatch_queue_t global   = dispatch_get_global_queue(0, 0);
+//    dispatch_async(global, ^{
+//        [self searchCafe:coordinate.latitude withLon:coordinate.longitude withDistance:_defaultRadius];
+//    });
     
 }
 
@@ -245,11 +254,88 @@ static NSString * const urlKey = @"url";
 
 }
 
+
+/**
+ *  ピンをたてる
+ */
+-(void)setPin{
+    
+    
+    
+    //ピンをたてる
+    BOOL checkFlag;
+    int count = [_cafeAry count];
+    
+    NSArray* newArray=[NSArray arrayWithArray:_backupAry];
+    for (int i=0; i<[_cafeAry count]; i++) {
+        
+        NSString *storename = [[_cafeAry objectAtIndex:i] objectForKey:@"store_name"];
+        
+        //すでに一回セットしてるなら無視
+        if([newArray count] > 0){
+            
+            checkFlag = [newArray containsObject:storename];
+            
+            
+            if(checkFlag == TRUE){
+                continue;
+            }
+        }
+        if(storename != nil){
+            [_backupAry addObject:storename];
+        }
+        
+        
+        double d_lat = [[[_cafeAry objectAtIndex:i] objectForKey:@"lat"] doubleValue];
+        double d_lon = [[[_cafeAry objectAtIndex:i] objectForKey:@"lng"] doubleValue];
+        
+        
+        GMSMarker *cafeMarker = [[GMSMarker alloc] init];
+        
+        cafeMarker.title = [[_cafeAry objectAtIndex:i] objectForKey:@"store_name"];
+        cafeMarker.position = CLLocationCoordinate2DMake(d_lat,d_lon);
+        cafeMarker.appearAnimation = kGMSMarkerAnimationPop;
+        
+        
+        if(i <= count){
+            if([_cafeAry objectAtIndex:i] != nil){
+                NSDictionary *markerInfo =
+                @{
+                  urlKey: [[_cafeAry objectAtIndex:i] objectForKey:@"url"]
+                  }
+                ;
+                cafeMarker.userData = markerInfo;
+            }
+        }
+        
+        
+        
+
+        
+        
+        cafeMarker.flat = YES;
+        cafeMarker.draggable = YES;
+        cafeMarker.groundAnchor = CGPointMake(0.5, 0.5);
+        cafeMarker.map = _mapView;
+    }
+    
+    
+    if([_backupAry count] > 500){
+        _backupAry = nil;
+        _backupAry = [[NSMutableArray alloc] init];
+        _pinclflag = true;
+    }
+    
+    
+    
+}
+
 /**
  *  カフェのマーカーをつける
  */
 -(void)setCafeAnnotation{
     _cafeAry = [_cafe checkListAry];
+    
 	
 	if([_cafeAry count] == 0){
 		//NSLog(@"ああああああ");
@@ -257,53 +343,25 @@ static NSString * const urlKey = @"url";
 	}
     
     //NSLog(@"ary1:%@",_cafeAry);
+    
     [self setPin];
+    
+    //[self setPin];
+    
+    
+//    [NSThread
+//     detachNewThreadSelector:@selector(setPin:)
+//     toTarget:self
+//     withObject:nil];
+    
+//    [self performSelectorInBackground:@selector(setPin:)
+//                           withObject:nil];
+    
+//    [self performSelectorOnMainThread:@selector(setPin:) withObject:nil waitUntilDone:NO];
+    
     
 }
 
-/**
- *  ピンをたてる
- */
--(void)setPin{
-    NSLog(@"ary2:%@",_cafeAry);
-    //ピンをたてる
-    BOOL checkFlag;
-    for (int i=0; i<[_cafeAry count]; i++) {
-        
-        //すでに一回セットしてるなら無視
-        if([_backupAry count] > 0){
-            
-            checkFlag = [_backupAry containsObject:[[_cafeAry objectAtIndex:i] objectForKey:@"store_name"]];
-            
-            
-            if(checkFlag == TRUE){
-                continue;
-            }
-        }
-        [_backupAry addObject:[[_cafeAry objectAtIndex:i] objectForKey:@"store_name"]];
-        
-        double d_lat = [[[_cafeAry objectAtIndex:i] objectForKey:@"lat"] doubleValue];
-        double d_lon = [[[_cafeAry objectAtIndex:i] objectForKey:@"lng"] doubleValue];
-        
-        NSDictionary *markerInfo =
-                                 @{
-                                     urlKey: [[_cafeAry objectAtIndex:i] objectForKey:@"url"]
-                                     }
-                                 ;
-        
-        GMSMarker *cafeMarker = [[GMSMarker alloc] init];
-        
-        cafeMarker.title = [[_cafeAry objectAtIndex:i] objectForKey:@"store_name"];
-        cafeMarker.position = CLLocationCoordinate2DMake(d_lat,d_lon);
-        cafeMarker.appearAnimation = kGMSMarkerAnimationPop;
-        cafeMarker.userData = markerInfo;
-        cafeMarker.flat = YES;
-        cafeMarker.draggable = YES;
-        cafeMarker.groundAnchor = CGPointMake(0.5, 0.5);
-        cafeMarker.map = _mapView;
-    }
-    
-}
 
 - (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker {
     CLLocationCoordinate2D anchor = marker.position;
@@ -365,7 +423,7 @@ static NSString * const urlKey = @"url";
         //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
         
         Web *w = [self.storyboard instantiateViewControllerWithIdentifier:@"web_storyboard"];
-        NSLog(@"%@",userData[urlKey]);
+        //NSLog(@"%@",userData[urlKey]);
         [w setServiceUrl:userData[urlKey]];
         [self.navigationController pushViewController:w animated:YES];
         w=nil;
@@ -379,7 +437,7 @@ static NSString * const urlKey = @"url";
  *  @param map_view_ グーグルマップ
  *  @param position_ 位置
  */
--(void)mapView:(GMSMapView*)map_view_ didChangeCameraPosition:(GMSCameraPosition *)position_{
+-(void)mapView:(GMSMapView*)map_view_ idleAtCameraPosition:(GMSCameraPosition *)position_{
     self.calloutView.hidden = YES;
     NSLog(@"map move");
     //縮尺を取得
@@ -392,9 +450,14 @@ static NSString * const urlKey = @"url";
     [defaults setObject:[NSString stringWithFormat:@"%f",lng] forKey:@"lon"];
     [defaults setObject:[NSString stringWithFormat:@"%f",zoom*_defaultRadius] forKey:@"distance"];
     defaults=nil;
-
+    
     [self searchCafe:lat withLon:lng withDistance:_defaultRadius];
     
+//    dispatch_queue_t global   = dispatch_get_global_queue(0, 0);
+//    dispatch_async(global, ^{
+//
+//        [self searchCafe:lat withLon:lng withDistance:_defaultRadius];
+//    });
 }
 
 
@@ -405,19 +468,22 @@ static NSString * const urlKey = @"url";
  */
 -(void)viewWillappear:(BOOL)animated{
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    NSString *latStr = (NSString*)[defaults objectForKey:@"lat"];
+//    NSString *lonStr = (NSString*)[defaults objectForKey:@"lon"];
+//    NSString *distanceStr = (NSString*)[defaults objectForKey:@"distance"];
+//    
+//    double lat = latStr.doubleValue;
+//    double lng = lonStr.doubleValue;
+//    double distance = distanceStr.doubleValue;
+//
+//    [self searchCafe:lat withLon:lng withDistance:distance];
     
-    NSString *latStr = (NSString*)[defaults objectForKey:@"lat"];
-    NSString *lonStr = (NSString*)[defaults objectForKey:@"lon"];
-    NSString *distanceStr = (NSString*)[defaults objectForKey:@"distance"];
-    
-    double lat = latStr.doubleValue;
-    double lng = lonStr.doubleValue;
-    double distance = distanceStr.doubleValue;
-    
-    
-    [self searchCafe:lat withLon:lng withDistance:distance];
-    
+//    dispatch_queue_t global   = dispatch_get_global_queue(0, 0);
+//    dispatch_async(global, ^{
+//        [self searchCafe:lat withLon:lng withDistance:distance];
+//    }); 
 }
 
 
@@ -432,8 +498,7 @@ static NSString * const urlKey = @"url";
     [_mapView clear];
     _backupAry = nil;
     _backupAry = [[NSMutableArray alloc] init];
-    _cafeAry = nil;
-    _cafeAry = [[NSMutableArray alloc] init];
+    
     
     
 }
@@ -442,7 +507,10 @@ static NSString * const urlKey = @"url";
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    [_mapView clear];
     _backupAry = nil;
+    _backupAry = [[NSMutableArray alloc] init];
+    
     // Dispose of any resources that can be recreated.
 }
 

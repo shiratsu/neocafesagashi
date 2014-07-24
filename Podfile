@@ -1,3 +1,4 @@
-platform :ios, '6.0'
+platform :ios, '7.0'
 
+pod 'KINWebBrowser'
 pod 'SMCalloutView', '~> 2.0'

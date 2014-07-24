@@ -41,7 +41,7 @@
 					   " FROM cafes %@",selectColumn,conditionString];
     
     FMResultSet *rs = [db executeQuery:query];
-    NSLog(@"%@",query);
+    //NSLog(@"%@",query);
     
     while ([rs next]) {
 		
@@ -66,7 +66,7 @@
 		
 		[checkListAry addObject:hDict];
 	}
-	NSLog(@"%@",checkListAry);
+	//NSLog(@"%@",checkListAry);
     return;
 }
 
