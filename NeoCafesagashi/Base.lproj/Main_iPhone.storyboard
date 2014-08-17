@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gpy-Nt-eRN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gpy-Nt-eRN">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -85,7 +86,41 @@
             </objects>
             <point key="canvasLocation" x="689" y="916"/>
         </scene>
-        <!--View Controller - カフェ探し-->
+        <!--View Controller-->
+        <scene sceneID="f4z-Ag-etu">
+            <objects>
+                <viewController id="hO7-R5-75p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B5E-RP-VHc"/>
+                        <viewControllerLayoutGuide type="bottom" id="vbc-dq-V4W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ayy-MK-XKq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="238" translatesAutoresizingMaskIntoConstraints="NO" id="yJ6-Fo-RLm">
+                                <rect key="frame" x="41" y="70" width="238" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">本アプリはぐるなびのデータを
+利用しています</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="api_265_65.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Rrh-lr-Fm9">
+                                <rect key="frame" x="28" y="153" width="265" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5kL-Fw-DNe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w47-st-aDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1243" y="906"/>
+        </scene>
+        <!--View Controller - カフェさがし-->
         <scene sceneID="BVi-eH-vHh">
             <objects>
                 <viewController id="v7Y-Ei-m4l" customClass="ViewController" sceneMemberID="viewController">
@@ -101,25 +136,30 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oD-wL-phF" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0oD-wL-phF" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wsv-Ah-vpu" firstAttribute="top" secondItem="0oD-wL-phF" secondAttribute="bottom" id="IMA-2F-u8h"/>
                             <constraint firstItem="0oD-wL-phF" firstAttribute="leading" secondItem="SrO-HZ-4Zp" secondAttribute="leading" id="Pke-ld-arq"/>
                             <constraint firstItem="0oD-wL-phF" firstAttribute="leading" secondItem="dBn-Dm-yBx" secondAttribute="leading" id="Z0V-9K-YtM"/>
                             <constraint firstAttribute="bottom" secondItem="0oD-wL-phF" secondAttribute="bottom" id="nDE-gp-yBn"/>
                             <constraint firstItem="0oD-wL-phF" firstAttribute="trailing" secondItem="SrO-HZ-4Zp" secondAttribute="trailing" id="p6w-be-Roe"/>
                             <constraint firstAttribute="trailing" secondItem="0oD-wL-phF" secondAttribute="trailing" id="tht-6R-H7W"/>
-                            <constraint firstItem="0oD-wL-phF" firstAttribute="top" secondItem="560-Ia-VWs" secondAttribute="bottom" constant="454" id="vdA-MY-P3r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="カフェ探し" id="K4r-Lz-wE9">
+                    <navigationItem key="navigationItem" title="カフェさがし" id="K4r-Lz-wE9">
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="W5U-cC-jIA">
                             <connections>
                                 <action selector="reloadPosition:" destination="v7Y-Ei-m4l" id="Wvj-1J-4Wf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="License" id="5Kd-EP-ULy">
+                            <connections>
+                                <segue destination="hO7-R5-75p" kind="push" id="8Uv-Yp-olX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -133,6 +173,9 @@
             <point key="canvasLocation" x="866" y="225"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="api_265_65.gif" width="265" height="65"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

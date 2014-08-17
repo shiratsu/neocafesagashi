@@ -9,6 +9,7 @@
 #import "CafeService.h"
 #import "Cafes.h"
 #define DBFILE     @"cafesagashi.db"
+#import <dispatch/dispatch.h>
 
 @interface CafeService ()
 - (double)calcDistance:(double )baseLat

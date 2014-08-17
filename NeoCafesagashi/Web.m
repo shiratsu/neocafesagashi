@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSLog(@"%@",serviceUrl);
+    //NSLog(@"%@",serviceUrl);
     NSURL *url = [NSURL URLWithString:serviceUrl];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:req];
@@ -52,7 +52,7 @@
 
 // ページ読込完了時にインジケータを非表示にする
 -(void)webViewDidFinishLoad:(UIWebView*)webView{
-    NSLog(@"end");
+    //NSLog(@"end");
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 - (IBAction)reload:(id)sender {

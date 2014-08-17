@@ -31,7 +31,22 @@
 		580EE35119064E0400F39E4E /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580EE35019064E0400F39E4E /* GoogleMaps.framework */; };
 		580EE35319064E8E00F39E4E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 580EE35219064E8E00F39E4E /* GoogleMaps.bundle */; };
 		580EE35419064E9700F39E4E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 580EE35219064E8E00F39E4E /* GoogleMaps.bundle */; };
+		581535C0199E43D7005FD329 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 581535BD199E43D7005FD329 /* Default.png */; };
+		581535C4199ECCF8005FD329 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 581535C3199ECCF8005FD329 /* Default-568h@2x.png */; };
+		581535C6199ED42A005FD329 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 581535C5199ED42A005FD329 /* Default@2x.png */; };
+		58177494199520D8001A37D6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 58177492199520D8001A37D6 /* Icon.png */; };
+		58177495199520D8001A37D6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58177493199520D8001A37D6 /* Icon@2x.png */; };
+		5817749A1995210C001A37D6 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774961995210C001A37D6 /* Icon-72.png */; };
+		5817749B1995210C001A37D6 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774971995210C001A37D6 /* Icon-72@2x.png */; };
+		5817749C1995210C001A37D6 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774981995210C001A37D6 /* Icon-76.png */; };
+		5817749D1995210C001A37D6 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774991995210C001A37D6 /* Icon-76@2x.png */; };
+		581774A81995AA3C001A37D6 /* pin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774A61995AA3C001A37D6 /* pin1.png */; };
+		581774A91995AA3C001A37D6 /* pin1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774A71995AA3C001A37D6 /* pin1@2x.png */; };
 		58274A6E18FF4A5E00B54D91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58274A6D18FF4A5E00B54D91 /* MapKit.framework */; };
+		582AAADE199F59F500E11C4D /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 582AAADC199F59F500E11C4D /* icon-29@2x.png */; };
+		582AAADF199F59F500E11C4D /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 582AAADD199F59F500E11C4D /* icon-40@2x.png */; };
+		582AAAE1199F5A4300E11C4D /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 582AAAE0199F5A4300E11C4D /* icon-60@2x.png */; };
+		582AAAE3199F5D1100E11C4D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582AAAE2199F5D1100E11C4D /* Main_iPad.storyboard */; };
 		58418A631931703E0060D65A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58418A141931703E0060D65A /* libGoogleAdMobAds.a */; };
 		58579EF61980000000D959D8 /* cafesagashi.db in Resources */ = {isa = PBXBuildFile; fileRef = 58579EF51980000000D959D8 /* cafesagashi.db */; };
 		5863E52A19192693004CFA07 /* Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863E52819192693004CFA07 /* Web.m */; };
@@ -76,6 +91,9 @@
 		58A21F5119022B190079B2D1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A21F5019022B190079B2D1 /* OpenGLES.framework */; };
 		58B37A0E19009E9700633172 /* NeoCafesagashiSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B37A0D19009E9700633172 /* NeoCafesagashiSpec.m */; };
 		58B93C6E190583180064F2F8 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B93C6D190583180064F2F8 /* Common.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		58BB6D3519A02C3600E01593 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 58BB6D3319A02C3600E01593 /* Default-Portrait.png */; };
+		58BB6D3619A02C3600E01593 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58BB6D3419A02C3600E01593 /* Default-Portrait@2x.png */; };
+		58BB6D3819A0667A00E01593 /* api_265_65.gif in Resources */ = {isa = PBXBuildFile; fileRef = 58BB6D3719A0667A00E01593 /* api_265_65.gif */; };
 		58D46E12190F9D4A00D8F910 /* Cafes.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D46E11190F9D4A00D8F910 /* Cafes.m */; };
 		58D46E13190F9D4A00D8F910 /* Cafes.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D46E11190F9D4A00D8F910 /* Cafes.m */; };
 		58D46E16190F9E4E00D8F910 /* CafeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D46E15190F9E4E00D8F910 /* CafeService.m */; };
@@ -104,7 +122,22 @@
 		580EE33B190646DE00F39E4E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		580EE35019064E0400F39E4E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../Downloads/GoogleMaps-iOS-1.7.2/GoogleMaps.framework"; sourceTree = "<group>"; };
 		580EE35219064E8E00F39E4E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		581535BD199E43D7005FD329 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		581535C3199ECCF8005FD329 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		581535C5199ED42A005FD329 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		58177492199520D8001A37D6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		58177493199520D8001A37D6 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		581774961995210C001A37D6 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		581774971995210C001A37D6 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		581774981995210C001A37D6 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		581774991995210C001A37D6 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		581774A61995AA3C001A37D6 /* pin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin1.png; sourceTree = "<group>"; };
+		581774A71995AA3C001A37D6 /* pin1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin1@2x.png"; sourceTree = "<group>"; };
 		58274A6D18FF4A5E00B54D91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		582AAADC199F59F500E11C4D /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
+		582AAADD199F59F500E11C4D /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
+		582AAAE0199F5A4300E11C4D /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@2x.png"; sourceTree = "<group>"; };
+		582AAAE2199F5D1100E11C4D /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		58418A081931703E0060D65A /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
 		58418A091931703E0060D65A /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
 		58418A0A1931703E0060D65A /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
@@ -175,6 +208,9 @@
 		58B37A0D19009E9700633172 /* NeoCafesagashiSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeoCafesagashiSpec.m; sourceTree = "<group>"; };
 		58B93C6C190583180064F2F8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		58B93C6D190583180064F2F8 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		58BB6D3319A02C3600E01593 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		58BB6D3419A02C3600E01593 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
+		58BB6D3719A0667A00E01593 /* api_265_65.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = api_265_65.gif; sourceTree = "<group>"; };
 		58D46E10190F9D4A00D8F910 /* Cafes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cafes.h; sourceTree = "<group>"; };
 		58D46E11190F9D4A00D8F910 /* Cafes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cafes.m; sourceTree = "<group>"; };
 		58D46E14190F9E4E00D8F910 /* CafeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafeService.h; sourceTree = "<group>"; };
@@ -263,6 +299,23 @@
 		58274A6C18FF4A2600B54D91 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				58BB6D3719A0667A00E01593 /* api_265_65.gif */,
+				58BB6D3319A02C3600E01593 /* Default-Portrait.png */,
+				58BB6D3419A02C3600E01593 /* Default-Portrait@2x.png */,
+				582AAAE0199F5A4300E11C4D /* icon-60@2x.png */,
+				582AAADC199F59F500E11C4D /* icon-29@2x.png */,
+				582AAADD199F59F500E11C4D /* icon-40@2x.png */,
+				581535C5199ED42A005FD329 /* Default@2x.png */,
+				581535C3199ECCF8005FD329 /* Default-568h@2x.png */,
+				581535BD199E43D7005FD329 /* Default.png */,
+				581774961995210C001A37D6 /* Icon-72.png */,
+				581774971995210C001A37D6 /* Icon-72@2x.png */,
+				581774981995210C001A37D6 /* Icon-76.png */,
+				581774991995210C001A37D6 /* Icon-76@2x.png */,
+				58177492199520D8001A37D6 /* Icon.png */,
+				58177493199520D8001A37D6 /* Icon@2x.png */,
+				581774A61995AA3C001A37D6 /* pin1.png */,
+				581774A71995AA3C001A37D6 /* pin1@2x.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -369,6 +422,7 @@
 				580EE32F1905874900F39E4E /* CommonTest.m */,
 				5863E52719192693004CFA07 /* Web.h */,
 				5863E52819192693004CFA07 /* Web.m */,
+				582AAAE2199F5D1100E11C4D /* Main_iPad.storyboard */,
 			);
 			path = NeoCafesagashi;
 			sourceTree = "<group>";
@@ -552,11 +606,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582AAADE199F59F500E11C4D /* icon-29@2x.png in Resources */,
+				581535C6199ED42A005FD329 /* Default@2x.png in Resources */,
+				581774A91995AA3C001A37D6 /* pin1@2x.png in Resources */,
+				58BB6D3619A02C3600E01593 /* Default-Portrait@2x.png in Resources */,
+				58177494199520D8001A37D6 /* Icon.png in Resources */,
 				5864C60A18FDE6DC00A54149 /* Images.xcassets in Resources */,
+				5817749B1995210C001A37D6 /* Icon-72@2x.png in Resources */,
+				58BB6D3519A02C3600E01593 /* Default-Portrait.png in Resources */,
+				58BB6D3819A0667A00E01593 /* api_265_65.gif in Resources */,
+				58177495199520D8001A37D6 /* Icon@2x.png in Resources */,
+				582AAAE3199F5D1100E11C4D /* Main_iPad.storyboard in Resources */,
 				5864C60218FDE6DC00A54149 /* Main_iPhone.storyboard in Resources */,
+				5817749D1995210C001A37D6 /* Icon-76@2x.png in Resources */,
 				58579EF61980000000D959D8 /* cafesagashi.db in Resources */,
+				5817749A1995210C001A37D6 /* Icon-72.png in Resources */,
+				582AAADF199F59F500E11C4D /* icon-40@2x.png in Resources */,
+				5817749C1995210C001A37D6 /* Icon-76.png in Resources */,
 				580EE35319064E8E00F39E4E /* GoogleMaps.bundle in Resources */,
+				581535C0199E43D7005FD329 /* Default.png in Resources */,
+				581535C4199ECCF8005FD329 /* Default-568h@2x.png in Resources */,
+				581774A81995AA3C001A37D6 /* pin1.png in Resources */,
 				5864C5F918FDE6DC00A54149 /* InfoPlist.strings in Resources */,
+				582AAAE1199F5A4300E11C4D /* icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +878,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -834,6 +907,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -896,6 +970,97 @@
 			};
 			name = Release;
 		};
+		587AFCC5199EDA0B00D83FE4 /* adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = adhoc;
+		};
+		587AFCC6199EDA0B00D83FE4 /* adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F1A7AF6F9F54AC39840C272 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/shiratsu/Downloads/GoogleMaps-iOS-1.7.2",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NeoCafesagashi/NeoCafesagashi-Prefix.pch";
+				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NeoCafesagashi",
+					"$(PROJECT_DIR)/NeoCafesagashi/Add-ons/GoogleAnalyticsServicesiOS_3.06",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = adhoc;
+		};
+		587AFCC7199EDA0B00D83FE4 /* adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3356EDF4E46749E2919B6429 /* Pods-NeoCafesagashiTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NeoCafesagashi.app/NeoCafesagashi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"/Users/shiratsu/Downloads/GoogleMaps-iOS-1.7.2",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NeoCafesagashi/NeoCafesagashi-Prefix.pch";
+				INFOPLIST_FILE = "NeoCafesagashiTests/NeoCafesagashiTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = adhoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -904,6 +1069,7 @@
 			buildConfigurations = (
 				5864C61E18FDE6DC00A54149 /* Debug */,
 				5864C61F18FDE6DC00A54149 /* Release */,
+				587AFCC5199EDA0B00D83FE4 /* adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -913,6 +1079,7 @@
 			buildConfigurations = (
 				5864C62118FDE6DC00A54149 /* Debug */,
 				5864C62218FDE6DC00A54149 /* Release */,
+				587AFCC6199EDA0B00D83FE4 /* adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -922,6 +1089,7 @@
 			buildConfigurations = (
 				5864C62418FDE6DC00A54149 /* Debug */,
 				5864C62518FDE6DC00A54149 /* Release */,
+				587AFCC7199EDA0B00D83FE4 /* adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

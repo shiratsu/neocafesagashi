@@ -125,6 +125,7 @@ static NSString * const urlKey = @"url";
  *  現在地の取得を開始
  */
 - (void)startLocation {
+    
     _backupAry = nil;
     _backupAry = [[NSMutableArray alloc] init];
     NSLog(@"start now location");
@@ -161,8 +162,18 @@ static NSString * const urlKey = @"url";
 	[defaults setObject:[NSString stringWithFormat:@"%f",coordinate.longitude] forKey:@"lon"];
 	[defaults setObject:[NSString stringWithFormat:@"%f",_defaultRadius] forKey:@"distance"];
     defaults=nil;
-    
-    [self searchCafe:coordinate.latitude withLon:coordinate.longitude withDistance:_defaultRadius];
+    [self stopLocation];
+    //[self searchCafe:coordinate.latitude withLon:coordinate.longitude withDistance:_defaultRadius];
+    [_mapView clear];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Background operations
+        [self searchCafe:coordinate.latitude withLon:coordinate.longitude withDistance:_defaultRadius];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Main Thread
+            [self setCafeAnnotation];
+        });
+    });
     
     //カフェを検索する
 //    dispatch_queue_t global   = dispatch_get_global_queue(0, 0);
@@ -179,6 +190,7 @@ static NSString * const urlKey = @"url";
  *  @param error   <#error description#>
  */
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSLog(@"failed now location");
     [_lm stopUpdatingLocation];
 }
 
@@ -190,9 +202,9 @@ static NSString * const urlKey = @"url";
  *  @param distance  現在地から半径どのくらいを検索対象とするか
  */
 -(void)searchCafe:(double )latitude withLon:(double )longitude withDistance:(double)distance{
-    NSLog(@"lat:%f",latitude);
-    NSLog(@"lng:%f",longitude);
-    NSLog(@"distance:%f",distance);
+//    NSLog(@"lat:%f",latitude);
+//    NSLog(@"lng:%f",longitude);
+//    NSLog(@"distance:%f",distance);
     
     
     //半径Xキロに該当する範囲の緯度経度を導きだす
@@ -212,7 +224,7 @@ static NSString * const urlKey = @"url";
     
     
     //アノテーションつける
-    [self setCafeAnnotation];
+    //[self setCafeAnnotation];
 }
 
 /**
@@ -267,6 +279,9 @@ static NSString * const urlKey = @"url";
     int count = [_cafeAry count];
     
     NSArray* newArray=[NSArray arrayWithArray:_backupAry];
+    
+    UIImage *pinImage = [UIImage imageNamed:@"pin1"];
+    
     for (int i=0; i<[_cafeAry count]; i++) {
         
         NSString *storename = [[_cafeAry objectAtIndex:i] objectForKey:@"store_name"];
@@ -308,11 +323,9 @@ static NSString * const urlKey = @"url";
             }
         }
         
-        
-        
 
         
-        
+        cafeMarker.icon = pinImage;
         cafeMarker.flat = YES;
         cafeMarker.draggable = YES;
         cafeMarker.groundAnchor = CGPointMake(0.5, 0.5);
@@ -439,7 +452,7 @@ static NSString * const urlKey = @"url";
  */
 -(void)mapView:(GMSMapView*)map_view_ idleAtCameraPosition:(GMSCameraPosition *)position_{
     self.calloutView.hidden = YES;
-    NSLog(@"map move");
+    //NSLog(@"map move");
     //縮尺を取得
     double zoom = position_.zoom;
     double lat = position_.target.latitude;
@@ -448,10 +461,22 @@ static NSString * const urlKey = @"url";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[NSString stringWithFormat:@"%f",lat] forKey:@"lat"];
     [defaults setObject:[NSString stringWithFormat:@"%f",lng] forKey:@"lon"];
-    [defaults setObject:[NSString stringWithFormat:@"%f",zoom*_defaultRadius] forKey:@"distance"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",zoom*30] forKey:@"distance"];
     defaults=nil;
+    NSLog(@"%f",zoom*_defaultRadius);
+    //[self searchCafe:lat withLon:lng withDistance:_defaultRadius];
     
-    [self searchCafe:lat withLon:lng withDistance:_defaultRadius];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Background operations
+        [self searchCafe:lat withLon:lng withDistance:_defaultRadius];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Main Thread
+            [self setCafeAnnotation];
+        });
+    });
+
     
 //    dispatch_queue_t global   = dispatch_get_global_queue(0, 0);
 //    dispatch_async(global, ^{

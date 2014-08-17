@@ -239,7 +239,7 @@
 		id object = [[tableDefine alloc] init];
 		
 		columnAry = [object columnAry];
-        NSLog(@"column:%@",columnAry);
+        //NSLog(@"column:%@",columnAry);
 		selectColumn = [columnAry componentsJoinedByString:@","];
 		
 		
@@ -345,7 +345,7 @@
 #pragma mark リミット句作成
 -(NSString *)createLimit:(NSMutableDictionary*)limitItem{
     
-    NSLog(@"limitItem：%@",limitItem);
+    //NSLog(@"limitItem：%@",limitItem);
     
 	NSString *limit = nil;
     if(limitItem != nil){
