@@ -26,10 +26,10 @@ static NSString * const urlKey = @"url";
 }
 
 @property(strong,nonatomic) IBOutlet GMSMapView *mapView;
-@property(strong,nonatomic) IBOutlet GADBannerView *bannerView;
+@property(weak,nonatomic) IBOutlet GADBannerView *bannerView;
 @property(strong,nonatomic) CLLocationManager *lm;
 @property(strong,nonatomic) CafeService *cafe;
-@property(strong,nonatomic) NSMutableArray *cafeAry;
+@property(weak,nonatomic) NSMutableArray *cafeAry;
 @property(strong,nonatomic) NSMutableArray *backupAry;
 @property (strong, nonatomic) SMCalloutView *calloutView;
 @property (strong, nonatomic) UIView *emptyCalloutView;
