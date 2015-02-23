@@ -15,3 +15,6 @@ this aprication use DMDB.because FMDB can use sqlite easier than CoreData.
 ## From iOS8
 LocationManager need to listen whether to use location sencer.
 http://qiita.com/monkick@github/items/50bd13a7e60e18e96d3a
+
+## after understanding 循環参照
+i realized 循環参照 position on ViewController.
