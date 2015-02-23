@@ -42,6 +42,8 @@
 		5817749D1995210C001A37D6 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774991995210C001A37D6 /* Icon-76@2x.png */; };
 		581774A81995AA3C001A37D6 /* pin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774A61995AA3C001A37D6 /* pin1.png */; };
 		581774A91995AA3C001A37D6 /* pin1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 581774A71995AA3C001A37D6 /* pin1@2x.png */; };
+		581EB64C19AE122C00B5A409 /* Default-Porrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 581EB64A19AE122C00B5A409 /* Default-Porrait.png */; };
+		581EB64D19AE122C00B5A409 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 581EB64B19AE122C00B5A409 /* Default-Portrait@2x.png */; };
 		58274A6E18FF4A5E00B54D91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58274A6D18FF4A5E00B54D91 /* MapKit.framework */; };
 		582AAADE199F59F500E11C4D /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 582AAADC199F59F500E11C4D /* icon-29@2x.png */; };
 		582AAADF199F59F500E11C4D /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 582AAADD199F59F500E11C4D /* icon-40@2x.png */; };
@@ -91,8 +93,6 @@
 		58A21F5119022B190079B2D1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A21F5019022B190079B2D1 /* OpenGLES.framework */; };
 		58B37A0E19009E9700633172 /* NeoCafesagashiSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B37A0D19009E9700633172 /* NeoCafesagashiSpec.m */; };
 		58B93C6E190583180064F2F8 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B93C6D190583180064F2F8 /* Common.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		58BB6D3519A02C3600E01593 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 58BB6D3319A02C3600E01593 /* Default-Portrait.png */; };
-		58BB6D3619A02C3600E01593 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58BB6D3419A02C3600E01593 /* Default-Portrait@2x.png */; };
 		58BB6D3819A0667A00E01593 /* api_265_65.gif in Resources */ = {isa = PBXBuildFile; fileRef = 58BB6D3719A0667A00E01593 /* api_265_65.gif */; };
 		58D46E12190F9D4A00D8F910 /* Cafes.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D46E11190F9D4A00D8F910 /* Cafes.m */; };
 		58D46E13190F9D4A00D8F910 /* Cafes.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D46E11190F9D4A00D8F910 /* Cafes.m */; };
@@ -133,6 +133,8 @@
 		581774991995210C001A37D6 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
 		581774A61995AA3C001A37D6 /* pin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin1.png; sourceTree = "<group>"; };
 		581774A71995AA3C001A37D6 /* pin1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin1@2x.png"; sourceTree = "<group>"; };
+		581EB64A19AE122C00B5A409 /* Default-Porrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Porrait.png"; sourceTree = "<group>"; };
+		581EB64B19AE122C00B5A409 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
 		58274A6D18FF4A5E00B54D91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		582AAADC199F59F500E11C4D /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		582AAADD199F59F500E11C4D /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
@@ -208,8 +210,6 @@
 		58B37A0D19009E9700633172 /* NeoCafesagashiSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeoCafesagashiSpec.m; sourceTree = "<group>"; };
 		58B93C6C190583180064F2F8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		58B93C6D190583180064F2F8 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
-		58BB6D3319A02C3600E01593 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
-		58BB6D3419A02C3600E01593 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
 		58BB6D3719A0667A00E01593 /* api_265_65.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = api_265_65.gif; sourceTree = "<group>"; };
 		58D46E10190F9D4A00D8F910 /* Cafes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cafes.h; sourceTree = "<group>"; };
 		58D46E11190F9D4A00D8F910 /* Cafes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cafes.m; sourceTree = "<group>"; };
@@ -299,9 +299,9 @@
 		58274A6C18FF4A2600B54D91 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				581EB64A19AE122C00B5A409 /* Default-Porrait.png */,
+				581EB64B19AE122C00B5A409 /* Default-Portrait@2x.png */,
 				58BB6D3719A0667A00E01593 /* api_265_65.gif */,
-				58BB6D3319A02C3600E01593 /* Default-Portrait.png */,
-				58BB6D3419A02C3600E01593 /* Default-Portrait@2x.png */,
 				582AAAE0199F5A4300E11C4D /* icon-60@2x.png */,
 				582AAADC199F59F500E11C4D /* icon-29@2x.png */,
 				582AAADD199F59F500E11C4D /* icon-40@2x.png */,
@@ -609,16 +609,16 @@
 				582AAADE199F59F500E11C4D /* icon-29@2x.png in Resources */,
 				581535C6199ED42A005FD329 /* Default@2x.png in Resources */,
 				581774A91995AA3C001A37D6 /* pin1@2x.png in Resources */,
-				58BB6D3619A02C3600E01593 /* Default-Portrait@2x.png in Resources */,
 				58177494199520D8001A37D6 /* Icon.png in Resources */,
 				5864C60A18FDE6DC00A54149 /* Images.xcassets in Resources */,
 				5817749B1995210C001A37D6 /* Icon-72@2x.png in Resources */,
-				58BB6D3519A02C3600E01593 /* Default-Portrait.png in Resources */,
 				58BB6D3819A0667A00E01593 /* api_265_65.gif in Resources */,
+				581EB64D19AE122C00B5A409 /* Default-Portrait@2x.png in Resources */,
 				58177495199520D8001A37D6 /* Icon@2x.png in Resources */,
 				582AAAE3199F5D1100E11C4D /* Main_iPad.storyboard in Resources */,
 				5864C60218FDE6DC00A54149 /* Main_iPhone.storyboard in Resources */,
 				5817749D1995210C001A37D6 /* Icon-76@2x.png in Resources */,
+				581EB64C19AE122C00B5A409 /* Default-Porrait.png in Resources */,
 				58579EF61980000000D959D8 /* cafesagashi.db in Resources */,
 				5817749A1995210C001A37D6 /* Icon-72.png in Resources */,
 				582AAADF199F59F500E11C4D /* icon-40@2x.png in Resources */,
@@ -868,6 +868,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NeoCafesagashi/NeoCafesagashi-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"ENABLE_PONYDEBUGGER=1",
+				);
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (

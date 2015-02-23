@@ -649,16 +649,7 @@
 
 
 
-- (void)dealloc {
 
-	
-	self.columnAry=nil;
-	self.bindAry=nil;
-	self.valueAry=nil;
-	self.insertAry=nil;
-    
-
-}
 
 
 

@@ -21,7 +21,7 @@
 	
 	
 }
-@property(nonatomic,retain) NSMutableArray *checkListAry;
+@property(nonatomic) NSMutableArray *checkListAry;
 @property(nonatomic,retain) NSMutableArray *insertAry;
 @property(nonatomic,retain) NSMutableArray *bindAry;
 @property(nonatomic,retain) NSMutableArray *valueAry;

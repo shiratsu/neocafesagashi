@@ -101,7 +101,12 @@ static NSString * const urlKey = @"url";
     
     //DBサービス初期化
     _cafe = [[CafeService alloc] init];
-    [_cafe init];
+    
+    
+    if([_lm respondsToSelector:@selector(requestWhenInUseAuthorization)]){
+        [_lm requestWhenInUseAuthorization];
+    }
+    
     
     //現在地を取得する
     [self startLocation];
@@ -125,10 +130,10 @@ static NSString * const urlKey = @"url";
  *  現在地の取得を開始
  */
 - (void)startLocation {
-    
+    NSLog(@"start to get now position");
     _backupAry = nil;
     _backupAry = [[NSMutableArray alloc] init];
-    NSLog(@"start now location");
+    //NSLog(@"start now location");
     [_lm startUpdatingLocation];
 }
 
@@ -153,7 +158,7 @@ static NSString * const urlKey = @"url";
     
     NSLog(@"get now position");
     // この緯度経度で何かやる・・・
-    GMSCameraPosition *now = [GMSCameraPosition cameraWithLatitude:coordinate.latitude longitude:coordinate.longitude zoom:17];
+    GMSCameraPosition *now = [GMSCameraPosition cameraWithLatitude:coordinate.latitude longitude:coordinate.longitude zoom:18.0];
     [_mapView setCamera:now];
     
     //緯度経度、検索する範囲をこの時点で保存しておく
@@ -347,7 +352,7 @@ static NSString * const urlKey = @"url";
  *  カフェのマーカーをつける
  */
 -(void)setCafeAnnotation{
-    _cafeAry = [_cafe checkListAry];
+    _cafeAry = _cafe.checkListAry;
     
 	
 	if([_cafeAry count] == 0){
@@ -463,10 +468,10 @@ static NSString * const urlKey = @"url";
     [defaults setObject:[NSString stringWithFormat:@"%f",lng] forKey:@"lon"];
     [defaults setObject:[NSString stringWithFormat:@"%f",zoom*30] forKey:@"distance"];
     defaults=nil;
-    NSLog(@"%f",zoom*_defaultRadius);
+    //NSLog(@"%f",zoom*_defaultRadius);
     //[self searchCafe:lat withLon:lng withDistance:_defaultRadius];
     
-    
+    //非同期で検索して、表示は、同期処理で行っている
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // Background operations
         [self searchCafe:lat withLon:lng withDistance:_defaultRadius];
