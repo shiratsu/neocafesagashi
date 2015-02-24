@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "GoogleMapAPIKey.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 //#if ENABLE_PONYDEBUGGER
 //#import <PonyDebugger/PonyDebugger.h>
@@ -67,7 +69,7 @@
     // Log the required open source licenses!  Yes, just NSLog-ing them is not
     // enough but is good for a demo.
     NSLog(@"Open source licenses:\n%@", [GMSServices openSourceLicenseInfo]);
-    
+    [Fabric with:@[CrashlyticsKit]];
     // Override point for customization after application launch.
     return YES;
 }
