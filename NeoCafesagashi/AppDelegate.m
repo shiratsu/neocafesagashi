@@ -53,6 +53,9 @@
 //    
 //#endif
     
+    // ハンドラを登録
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    
     
     if ([kAPIKey length] == 0) {
         // Blow up if APIKey has not yet been set.
@@ -72,6 +75,11 @@
     [Fabric with:@[CrashlyticsKit]];
     // Override point for customization after application launch.
     return YES;
+}
+
+void uncaughtExceptionHandler(NSException *exception) {
+    NSLog(@"Exception: %@", exception);
+    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -32,7 +32,7 @@
  */
 -(void)feedCafe:(NSString *)conditionString withLat:(double )lat andlng:(double )lon{
     
-    checkListAry = [[NSMutableArray alloc] init];
+    self.checkListAry = [[NSMutableArray alloc] init];
 	
     FMDatabase *db = [self _getDB:DBFILE];
     
@@ -65,7 +65,7 @@
             [hDict setValue:[NSString stringWithFormat:@"%.2f",distance] forKey:@"distance"];
 		}
 		
-		[checkListAry addObject:hDict];
+		[self.checkListAry addObject:hDict];
 	}
 	//NSLog(@"%@",checkListAry);
     return;
