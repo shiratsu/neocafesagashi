@@ -22,3 +22,11 @@ i realized 循環参照 position on ViewController.of course i fixed.
 ## i replaced fmdb which is gotten from cocoapods.
 this occured several problems.but i resolved it.
 http://ja.stackoverflow.com/questions/7043/pods%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E3%82%A8%E3%83%A9%E3%83%BC/7048#7048
+
+when nsmutablearray has exc_bad_access
+
+maybe i will fix.
+
+http://stackoverflow.com/questions/3967104/nsmutablearray-exc-bad-access-when-i-try-read-from-it
+
+https://github.com/shiratsu/neocafesagashi/commit/8068e7846e2d3e3ef71401c63d77a588a7165564
