@@ -16,6 +16,9 @@ this aprication use DMDB.because FMDB can use sqlite easier than CoreData.
 LocationManager need to listen whether to use location sencer.
 http://qiita.com/monkick@github/items/50bd13a7e60e18e96d3a
 
+## about 循環参照
+http://south37.hatenablog.com/entry/2014/07/06/Objctive-C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Bweak%E5%8F%82%E7%85%A7%E3%81%AE%E4%BD%BF%E3%81%84%E3%81%A9%E3%81%93%E3%82%8D%E3%81%A3%E3%81%A6%E5%88%86%E3%81%8B%E3%82%8A%E3%81%A5%E3%82%89%E3%81%84
+
 ## after understanding 循環参照
 i realized 循環参照 position on ViewController.of course i fixed.
 
