@@ -18,3 +18,7 @@ http://qiita.com/monkick@github/items/50bd13a7e60e18e96d3a
 
 ## after understanding 循環参照
 i realized 循環参照 position on ViewController.of course i fixed.
+
+## i replaced fmdb which is gotten from cocoapods.
+this occured several problems.but i resolved it.
+http://ja.stackoverflow.com/questions/7043/pods%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E3%82%A8%E3%83%A9%E3%83%BC/7048#7048
