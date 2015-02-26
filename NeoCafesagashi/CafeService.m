@@ -46,12 +46,12 @@
     
     while ([rs next]) {
 		
-        double cafeLat = [[rs stringForColumn:@"lat"] doubleValue];
-		double cafeLon = [[rs stringForColumn:@"lng"] doubleValue];
-		double distance = [self calcDistance:lat
-								 withBaseLon:lon
-							  withAnotherLat:cafeLat
-							  withAnotherLon:cafeLon];
+//        double cafeLat = [[rs stringForColumn:@"lat"] doubleValue];
+//		double cafeLon = [[rs stringForColumn:@"lng"] doubleValue];
+//		double distance = [self calcDistance:lat
+//								 withBaseLon:lon
+//							  withAnotherLat:cafeLat
+//							  withAnotherLon:cafeLon];
 		
 		NSMutableDictionary *hDict = [NSMutableDictionary dictionary];
 		
@@ -62,10 +62,13 @@
 			}else{
 				[hDict setObject:@"" forKey:obj];
 			}
-            [hDict setValue:[NSString stringWithFormat:@"%.2f",distance] forKey:@"distance"];
+            //[hDict setValue:[NSString stringWithFormat:@"%.2f",distance] forKey:@"distance"];
 		}
+        
+        if(hDict != nil){
+            [self.checkListAry addObject:hDict];
+        }
 		
-		[self.checkListAry addObject:hDict];
 	}
 	//NSLog(@"%@",checkListAry);
     return;

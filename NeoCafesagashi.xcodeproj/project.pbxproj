@@ -49,7 +49,6 @@
 		582AAADF199F59F500E11C4D /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 582AAADD199F59F500E11C4D /* icon-40@2x.png */; };
 		582AAAE1199F5A4300E11C4D /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 582AAAE0199F5A4300E11C4D /* icon-60@2x.png */; };
 		582AAAE3199F5D1100E11C4D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582AAAE2199F5D1100E11C4D /* Main_iPad.storyboard */; };
-		58418A631931703E0060D65A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58418A141931703E0060D65A /* libGoogleAdMobAds.a */; };
 		58579EF61980000000D959D8 /* cafesagashi.db in Resources */ = {isa = PBXBuildFile; fileRef = 58579EF51980000000D959D8 /* cafesagashi.db */; };
 		5863E52A19192693004CFA07 /* Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863E52819192693004CFA07 /* Web.m */; };
 		5863E52B19192693004CFA07 /* Web.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863E52819192693004CFA07 /* Web.m */; };
@@ -138,19 +137,6 @@
 		582AAADD199F59F500E11C4D /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
 		582AAAE0199F5A4300E11C4D /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@2x.png"; sourceTree = "<group>"; };
 		582AAAE2199F5D1100E11C4D /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		58418A081931703E0060D65A /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
-		58418A091931703E0060D65A /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
-		58418A0A1931703E0060D65A /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
-		58418A0B1931703E0060D65A /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
-		58418A0C1931703E0060D65A /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		58418A0D1931703E0060D65A /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchase.h; sourceTree = "<group>"; };
-		58418A0E1931703E0060D65A /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
-		58418A0F1931703E0060D65A /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
-		58418A101931703E0060D65A /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		58418A111931703E0060D65A /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADModules.h; sourceTree = "<group>"; };
-		58418A121931703E0060D65A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
-		58418A131931703E0060D65A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		58418A141931703E0060D65A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		58579EF51980000000D959D8 /* cafesagashi.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = cafesagashi.db; sourceTree = "<group>"; };
 		5863E52719192693004CFA07 /* Web.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Web.h; sourceTree = "<group>"; };
 		5863E52819192693004CFA07 /* Web.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Web.m; sourceTree = "<group>"; };
@@ -215,6 +201,7 @@
 		58ED7A6D1A9C534900180F42 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		58F97C6F1A9CECB500B1A161 /* libPods-FMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-FMDB.a"; path = "Pods/build/Release-iphoneos/libPods-FMDB.a"; sourceTree = "<group>"; };
 		58F97C711A9CECBB00B1A161 /* libPods-SMCalloutView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SMCalloutView.a"; path = "Pods/build/Release-iphoneos/libPods-SMCalloutView.a"; sourceTree = "<group>"; };
+		58F97C7A1A9EF8EE00B1A161 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../Downloads/GoogleMobileAdsSdkiOS-7.0.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		73F727E67369A78B33088AF7 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		8DB7B13C36C945978084E688 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FD186BC5D0C31AE9A9F13E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,7 +242,6 @@
 				58ED7A6E1A9C534900180F42 /* Crashlytics.framework in Frameworks */,
 				5864C5EF18FDE6DC00A54149 /* Foundation.framework in Frameworks */,
 				C891D5C2391A4E8BB0D48315 /* libPods.a in Frameworks */,
-				58418A631931703E0060D65A /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +345,7 @@
 		5864C5ED18FDE6DC00A54149 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58F97C7A1A9EF8EE00B1A161 /* GoogleMobileAds.framework */,
 				58F97C711A9CECBB00B1A161 /* libPods-SMCalloutView.a */,
 				58F97C6F1A9CECB500B1A161 /* libPods-FMDB.a */,
 				589DC7531A9CCCC20062B479 /* libPods-SMCalloutView.a */,
@@ -404,7 +391,6 @@
 				58ED7A6C1A9C534900180F42 /* Crashlytics.framework */,
 				58ED7A6D1A9C534900180F42 /* Fabric.framework */,
 				58A21E8B1902008E0079B2D1 /* service */,
-				58A21E5E190179990079B2D1 /* admob */,
 				58274A7018FF4C3B00B54D91 /* conf */,
 				58274A6C18FF4A2600B54D91 /* image */,
 				58274A6B18FF4A1D00B54D91 /* common */,
@@ -454,26 +440,6 @@
 				5864C61918FDE6DC00A54149 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		58A21E5E190179990079B2D1 /* admob */ = {
-			isa = PBXGroup;
-			children = (
-				58418A081931703E0060D65A /* GADAdMobExtras.h */,
-				58418A091931703E0060D65A /* GADAdNetworkExtras.h */,
-				58418A0A1931703E0060D65A /* GADAdSize.h */,
-				58418A0B1931703E0060D65A /* GADBannerView.h */,
-				58418A0C1931703E0060D65A /* GADBannerViewDelegate.h */,
-				58418A0D1931703E0060D65A /* GADInAppPurchase.h */,
-				58418A0E1931703E0060D65A /* GADInAppPurchaseDelegate.h */,
-				58418A0F1931703E0060D65A /* GADInterstitial.h */,
-				58418A101931703E0060D65A /* GADInterstitialDelegate.h */,
-				58418A111931703E0060D65A /* GADModules.h */,
-				58418A121931703E0060D65A /* GADRequest.h */,
-				58418A131931703E0060D65A /* GADRequestError.h */,
-				58418A141931703E0060D65A /* libGoogleAdMobAds.a */,
-			);
-			name = admob;
 			sourceTree = "<group>";
 		};
 		58A21E8B1902008E0079B2D1 /* service */ = {
@@ -722,7 +688,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -898,10 +864,11 @@
 					"$(inherited)",
 					"/Applications/Xcode-Beta\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/FMDB\"",
-					"\"${PODS_ROOT}/Headers/PonyDebugger\"",
-					"\"${PODS_ROOT}/Headers/SMCalloutView\"",
-					"\"${PODS_ROOT}/Headers/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/SMCalloutView\"",
+					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"",
 				);
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -911,8 +878,12 @@
 					"$(PROJECT_DIR)/NeoCafesagashi/Add-ons/GoogleAnalyticsServicesiOS_3.06",
 					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
 				);
+				MTL_ENABLE_DEBUG_INFO = Yes;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -943,10 +914,11 @@
 					"$(inherited)",
 					"/Applications/Xcode-Beta\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/FMDB\"",
-					"\"${PODS_ROOT}/Headers/PonyDebugger\"",
-					"\"${PODS_ROOT}/Headers/SMCalloutView\"",
-					"\"${PODS_ROOT}/Headers/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/SMCalloutView\"",
+					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"",
 				);
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -956,7 +928,11 @@
 					"$(PROJECT_DIR)/NeoCafesagashi/Add-ons/GoogleAnalyticsServicesiOS_3.06",
 					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				MTL_ENABLE_DEBUG_INFO = No;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1080,10 +1056,11 @@
 					"$(inherited)",
 					"/Applications/Xcode-Beta\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/FMDB\"",
-					"\"${PODS_ROOT}/Headers/PonyDebugger\"",
-					"\"${PODS_ROOT}/Headers/SMCalloutView\"",
-					"\"${PODS_ROOT}/Headers/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/SMCalloutView\"",
+					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"",
 				);
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1093,8 +1070,12 @@
 					"$(PROJECT_DIR)/NeoCafesagashi/Add-ons/GoogleAnalyticsServicesiOS_3.06",
 					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
 				);
+				MTL_ENABLE_DEBUG_INFO = No;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

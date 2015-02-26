@@ -4,6 +4,7 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - Google-Mobile-Ads-SDK (6.12.2)
   - PonyDebugger (0.4.0):
     - SocketRocket
   - SMCalloutView (2.0.3)
@@ -11,13 +12,15 @@ PODS:
 
 DEPENDENCIES:
   - FMDB
+  - Google-Mobile-Ads-SDK (~> 6.12.2)
   - PonyDebugger
   - SMCalloutView
 
 SPEC CHECKSUMS:
   FMDB: 0efa188cf0dd1ce82c27a478cd5f5fa245308677
+  Google-Mobile-Ads-SDK: 9761186eb5dc5e1493e71dcce2b525159f763d42
   PonyDebugger: 4f43d7c2f67aa5e26ca00ce6983421608a6eca6d
   SMCalloutView: f413edafcbead0d0a59066efa0708cdbca6dbfff
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.0

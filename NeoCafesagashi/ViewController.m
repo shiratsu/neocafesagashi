@@ -8,14 +8,13 @@
 
 #import "ViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
-#import "GADBannerView.h"
 #import "Utility.h"
 #import "CafeService.h"
 #import <SMCalloutView/SMCalloutView.h>
 #import "MBProgressHUD.h"
 #import "Web.h"
 #import <dispatch/dispatch.h>
-
+#import "GADBannerView.h"
 
 static const CGFloat CalloutYOffset = 10.0f;
 static NSString * const urlKey = @"url";
@@ -26,7 +25,7 @@ static NSString * const urlKey = @"url";
 }
 
 @property(strong,nonatomic) IBOutlet GMSMapView *mapView;
-@property(weak,nonatomic) IBOutlet GADBannerView *bannerView;
+@property(retain,nonatomic) IBOutlet GADBannerView *bannerView;
 @property(strong,nonatomic) CLLocationManager *lm;
 @property(strong,nonatomic) CafeService *cafe;
 @property(weak,nonatomic) NSMutableArray *cafeAry;
@@ -377,7 +376,7 @@ static NSString * const urlKey = @"url";
     
 //    [self performSelectorOnMainThread:@selector(setPin:) withObject:nil waitUntilDone:NO];
     
-    
+    _cafe.checkListAry = nil;
 }
 
 
@@ -527,6 +526,7 @@ static NSString * const urlKey = @"url";
     //マーカー削除
     [_mapView clear];
     _backupAry = nil;
+
     _backupAry = [[NSMutableArray alloc] init];
     
     
