@@ -39,3 +39,11 @@ https://github.com/shiratsu/neocafesagashi/commit/8068e7846e2d3e3ef71401c63d77a5
 ### Google Map Error
 this has been using google map ver 1.7.it often crasshed while using application.
 so i will update ver 1.9. for now there are no problrem after updating 1.9 on development.
+
+## i should update admob.
+
+i have been using admob ver 6.x.
+i should update admob.
+when i updated admob 7,there was problem.but i resolved this problem by below url.
+
+http://ja.stackoverflow.com/questions/7150/ios%E3%81%A7admob%E3%82%92%E6%9C%80%E6%96%B0%E3%81%AB%E3%81%97%E3%81%9F%E3%82%89%E3%82%A8%E3%83%A9%E3%83%BC/7201#7201
