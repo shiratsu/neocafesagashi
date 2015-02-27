@@ -1,6 +1,6 @@
 # NeoCafesagashi
 
-I developed it in 2014.
+I have been developing it in 2014.
 I try to re-develop by swift lately.but i will decide not to re-develop.
 Because i want to understand ob-c more.
 
@@ -33,3 +33,9 @@ maybe i will fix.
 http://stackoverflow.com/questions/3967104/nsmutablearray-exc-bad-access-when-i-try-read-from-it
 
 https://github.com/shiratsu/neocafesagashi/commit/8068e7846e2d3e3ef71401c63d77a588a7165564
+
+## there are some probrems
+
+### Google Map Error
+this has been using google map ver 1.7.it often crasshed while using application.
+so i will update ver 1.9. for now there are no problrem after updating 1.9 on development.
