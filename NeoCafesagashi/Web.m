@@ -7,7 +7,7 @@
 //
 
 #import "Web.h"
-#import "GADBannerView.h"
+#import <GoogleMobileAds/GADBannerView.h>
 #import "Common.h"
 
 @interface Web ()

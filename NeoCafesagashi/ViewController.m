@@ -14,7 +14,7 @@
 #import "MBProgressHUD.h"
 #import "Web.h"
 #import <dispatch/dispatch.h>
-#import "GADBannerView.h"
+#import <GoogleMobileAds/GADBannerView.h>
 
 static const CGFloat CalloutYOffset = 10.0f;
 static NSString * const urlKey = @"url";
