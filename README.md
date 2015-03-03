@@ -47,3 +47,11 @@ i should update admob.
 when i updated admob 7,there was problem.but i resolved this problem by below url.
 
 http://ja.stackoverflow.com/questions/7150/ios%E3%81%A7admob%E3%82%92%E6%9C%80%E6%96%B0%E3%81%AB%E3%81%97%E3%81%9F%E3%82%89%E3%82%A8%E3%83%A9%E3%83%BC/7201#7201
+
+
+## New Relic Mobile
+I added the New Relic Mobile.
+https://rpm.newrelic.com/accounts/899455/mobile/12839818
+
+It is tool which can check smp-application-mobile.
+it can also check web and so on.
