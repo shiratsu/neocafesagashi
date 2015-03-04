@@ -476,6 +476,7 @@
 				5864C5E918FDE6DC00A54149 /* Resources */,
 				82587C22FABB4EFAAE9CE357 /* Copy Pods Resources */,
 				58ED7A6B1A9C52CE00180F42 /* ShellScript */,
+				581BC2EA1AA5255900B3CED7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -618,6 +619,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		581BC2EA1AA5255900B3CED7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\n\n/bin/sh \"${SCRIPT}\" \"AA36b8e16b17171a669fd081efa83d433273c0ff23\"";
+		};
 		58ED7A6B1A9C52CE00180F42 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -869,6 +883,7 @@
 					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
 					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
 					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0/GoogleMobileAds.framework\"",
+					"\"${PODS_ROOT}/Headers/Public/NewRelicAgent\"",
 				);
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -919,6 +934,7 @@
 					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
 					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
 					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0/GoogleMobileAds.framework\"",
+					"\"${PODS_ROOT}/Headers/Public/NewRelicAgent\"",
 				);
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1061,6 +1077,7 @@
 					"\"${PODS_ROOT}/Headers/Public/PonyDebugger\"",
 					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
 					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0/GoogleMobileAds.framework\"",
+					"\"${PODS_ROOT}/Headers/Public/NewRelicAgent\"",
 				);
 				INFOPLIST_FILE = "NeoCafesagashi/NeoCafesagashi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

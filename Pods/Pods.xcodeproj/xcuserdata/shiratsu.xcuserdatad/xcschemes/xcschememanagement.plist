@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-NewRelicAgent.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PonyDebugger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,6 +47,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>122D1FF70000090893DBE891</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>14C09A75DA932AF341978C01</key>
 		<dict>
 			<key>primary</key>
@@ -52,7 +62,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>756974C1077D4D9494C94B68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>817CC2815B45A28046838DC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93AB30A099EB61C0998B42E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>979B4A144CD9E53157C3AA1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD80C3D15839BD5B33E7784F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADFDD4A69FCB1BA8A2F34497</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C78DF8048F21DE843264B3E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

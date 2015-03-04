@@ -12,9 +12,9 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
-//#if ENABLE_PONYDEBUGGER
-//#import <PonyDebugger/PonyDebugger.h>
-//#endif
+#if ENABLE_PONYDEBUGGER
+#import <PonyDebugger/PonyDebugger.h>
+#endif
 
 @implementation AppDelegate{
     id services_;
@@ -24,34 +24,36 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-//#if ENABLE_PONYDEBUGGER
-//    
-//    PDDebugger *debugger = [PDDebugger defaultInstance];
-//    
-//    // Enable Network debugging, and automatically track network traffic that comes through any classes that implement either NSURLConnectionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate or NSURLSessionDataDelegate methods.
-//    [debugger enableNetworkTrafficDebugging];
-//    [debugger forwardAllNetworkTraffic];
-//    
-//    // Enable Core Data debugging, and broadcast the main managed object context.
-//    [debugger enableCoreDataDebugging];
-//    //[debugger addManagedObjectContext:self.managedObjectContext withName:@"PonyDebugger Test App MOC"];
-//    
-//    // Enable View Hierarchy debugging. This will swizzle UIView methods to monitor changes in the hierarchy
-//    // Choose a few UIView key paths to display as attributes of the dom nodes
-//    [debugger enableViewHierarchyDebugging];
-//    [debugger setDisplayedViewAttributeKeyPaths:@[@"frame", @"hidden", @"alpha", @"opaque", @"accessibilityLabel", @"text"]];
-//    
-//    // Connect to a specific host
-//    [debugger connectToURL:[NSURL URLWithString:@"ws://localhost:9000/device"]];
-//    // Or auto connect via bonjour discovery
-//    //[debugger autoConnect];
-//    // Or to a specific ponyd bonjour service
-//    //[debugger autoConnectToBonjourServiceNamed:@"MY PONY"];
-//    
-//    // Enable remote logging to the DevTools Console via PDLog()/PDLogObjects().
-//    [debugger enableRemoteLogging];
-//    
-//#endif
+#if ENABLE_PONYDEBUGGER
+    
+    PDDebugger *debugger = [PDDebugger defaultInstance];
+    
+    // Enable Network debugging, and automatically track network traffic that comes through any classes that implement either NSURLConnectionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate or NSURLSessionDataDelegate methods.
+    [debugger enableNetworkTrafficDebugging];
+    [debugger forwardAllNetworkTraffic];
+    
+    // Enable Core Data debugging, and broadcast the main managed object context.
+    [debugger enableCoreDataDebugging];
+    //[debugger addManagedObjectContext:self.managedObjectContext withName:@"PonyDebugger Test App MOC"];
+    
+    // Enable View Hierarchy debugging. This will swizzle UIView methods to monitor changes in the hierarchy
+    // Choose a few UIView key paths to display as attributes of the dom nodes
+    [debugger enableViewHierarchyDebugging];
+    [debugger setDisplayedViewAttributeKeyPaths:@[@"frame", @"hidden", @"alpha", @"opaque", @"accessibilityLabel", @"text"]];
+    
+    // Connect to a specific host
+    [debugger connectToURL:[NSURL URLWithString:@"ws://localhost:9000/device"]];
+    // Or auto connect via bonjour discovery
+    //[debugger autoConnect];
+    // Or to a specific ponyd bonjour service
+    //[debugger autoConnectToBonjourServiceNamed:@"MY PONY"];
+    
+    // Enable remote logging to the DevTools Console via PDLog()/PDLogObjects().
+    [debugger enableRemoteLogging];
+    
+#endif
+    
+    [NewRelicAgent startWithApplicationToken:@"AA36b8e16b17171a669fd081efa83d433273c0ff23"];
     
     // ハンドラを登録
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
