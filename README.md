@@ -58,4 +58,5 @@ It is tool which can check smp-application-mobile.
 it can also check web and so on.
 
 ### Some Problem
-it sometimes crash.cafesagashi crashed on 3/5 with adhoc-build by new relic plugin.
+* It sometimes crash.
+* Cafesagashi crashed on 3/5 with adhoc-build by new relic plugin.
