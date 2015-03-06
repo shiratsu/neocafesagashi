@@ -56,3 +56,7 @@ https://rpm.newrelic.com/accounts/899455/mobile/12839818
 
 It is tool which can check smp-application-mobile.
 it can also check web and so on.
+
+### Some Problem
+* It sometimes crash.
+* Cafesagashi crashed on 3/5 with adhoc-build by new relic plugin.
