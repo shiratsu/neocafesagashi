@@ -9,16 +9,16 @@ buildscript {
     classpath group: 'org.openbakery', name: 'xcodePlugin', version: '0.10.+'
   }
 }
+
 apply plugin: 'xcode'
 
 xcodebuild {
-  target = 'RealmSample2'
-  version = '6.3'
-  workspace = 'NeoCagesagashi.xcworkspace' //cocoapodを使用している時のみ指定
-  configuration = 'adhoc'
-  sdk = 'iphoneos'
-  signing{
-    identity = 'iPhone Distribution: NAME (...)' //キーチェーンアクセスの証明書に載っているのを書く
-    mobileProvisionURI = 'file://localhost/(.mobileprovisionまでのfile path)' //
-  }
+  scheme = 'NeoCafesagashi'
+  target = 'NeoCafesagashi'
+  workspace = 'NeoCafesagashi.xcworkspace'
+  
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.10'
 }
