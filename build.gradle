@@ -16,6 +16,14 @@ xcodebuild {
   scheme = 'NeoCafesagashi'
   target = 'NeoCafesagashi'
   workspace = 'NeoCafesagashi.xcworkspace'
+  configuration = 'adhoc'
+  sdk = 'iphoneos'
+  signing{
+    identity = 'iPhone Distribution: XXXXXX XXXXXXXX (XXXXXXX)' 
+    mobileProvisionURI = 'file://localhost/Users/shiratsu/Documents/NeoCafesagashi/cafesagashi_adhoc201503.mobileprovision'
+    certificateURI = 'file://localhost/Users/shiratsu/push_notification_info/shiratsu_distribution2.p12'
+    certificatePassword = 'XXXXXXX'
+  }
   
 }
 
