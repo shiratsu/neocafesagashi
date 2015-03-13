@@ -60,3 +60,8 @@ it can also check web and so on.
 ### Some Problem
 * It sometimes crash.
 * Cafesagashi crashed on 3/5 with adhoc-build by new relic plugin.
+
+## I want to build by gradle
+* i want to create ipa-file by gradle.
+* it was hard for me to do.But i could manage to create it.
+* https://github.com/openbakery/gradle-xcodePlugin/issues/153#event-251735773
