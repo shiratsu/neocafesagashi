@@ -24,8 +24,8 @@ static NSString * const urlKey = @"url";
     BOOL _pinclflag;
 }
 
-@property(strong,nonatomic) IBOutlet GMSMapView *mapView;
-@property(retain,nonatomic) IBOutlet GADBannerView *bannerView;
+@property(weak,nonatomic) IBOutlet GMSMapView *mapView;
+@property(weak,nonatomic) IBOutlet GADBannerView *bannerView;
 @property(strong,nonatomic) CLLocationManager *lm;
 @property(strong,nonatomic) CafeService *cafe;
 @property(weak,nonatomic) NSMutableArray *cafeAry;
